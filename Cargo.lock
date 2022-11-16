@@ -715,7 +715,27 @@ dependencies = [
  "prost",
  "prost-build",
  "prost-types",
- "substreams-macro",
+ "substreams-macro 0.3.2",
+ "thiserror",
+ "wee_alloc",
+]
+
+[[package]]
+name = "substreams"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "84022dbf04c6e8257423ea0f238365a9dc359c254a5536ff4d71793b74ec6957"
+dependencies = [
+ "bigdecimal",
+ "hex",
+ "hex-literal",
+ "num-bigint",
+ "num-traits",
+ "pad",
+ "prost",
+ "prost-build",
+ "prost-types",
+ "substreams-macro 0.4.0",
  "thiserror",
  "wee_alloc",
 ]
@@ -727,10 +747,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1b06e9e1389570981b251e304262124f26c30d5c2abc3a07d2cf048634db7cbb"
 dependencies = [
  "getrandom",
- "substreams",
- "substreams-ethereum-abigen",
- "substreams-ethereum-core",
- "substreams-ethereum-derive",
+ "substreams 0.3.2",
+ "substreams-ethereum-abigen 0.6.2",
+ "substreams-ethereum-core 0.6.2",
+ "substreams-ethereum-derive 0.6.2",
+]
+
+[[package]]
+name = "substreams-ethereum"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f6683edb7db5e774736c9890bd1493701bbe6b437ff0198c3d2faaec93127d9"
+dependencies = [
+ "getrandom",
+ "substreams 0.4.0",
+ "substreams-ethereum-abigen 0.7.0",
+ "substreams-ethereum-core 0.7.0",
+ "substreams-ethereum-derive 0.7.0",
 ]
 
 [[package]]
@@ -746,7 +779,24 @@ dependencies = [
  "prettyplease",
  "proc-macro2",
  "quote",
- "substreams-ethereum-core",
+ "substreams-ethereum-core 0.6.2",
+ "syn",
+]
+
+[[package]]
+name = "substreams-ethereum-abigen"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20df49da9fe3bdda5c706f090375671cbfb09d82e072058da8c4354c283178bb"
+dependencies = [
+ "anyhow",
+ "ethabi",
+ "heck",
+ "hex",
+ "prettyplease",
+ "proc-macro2",
+ "quote",
+ "substreams-ethereum-core 0.7.0",
  "syn",
 ]
 
@@ -763,7 +813,23 @@ dependencies = [
  "prost",
  "prost-build",
  "prost-types",
- "substreams",
+ "substreams 0.3.2",
+]
+
+[[package]]
+name = "substreams-ethereum-core"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c2977ebea95bf8fa80c6007b8087bb93d1108431da941300e9bc1b0ae47df844"
+dependencies = [
+ "bigdecimal",
+ "ethabi",
+ "getrandom",
+ "num-bigint",
+ "prost",
+ "prost-build",
+ "prost-types",
+ "substreams 0.4.0",
 ]
 
 [[package]]
@@ -777,7 +843,22 @@ dependencies = [
  "hex",
  "proc-macro2",
  "quote",
- "substreams-ethereum-abigen",
+ "substreams-ethereum-abigen 0.6.2",
+ "syn",
+]
+
+[[package]]
+name = "substreams-ethereum-derive"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f797f9e5ac65f3bd1e8d2b10e5700ba81a7de52df2c32fe58bfabfa311200a7b"
+dependencies = [
+ "ethabi",
+ "heck",
+ "hex",
+ "proc-macro2",
+ "quote",
+ "substreams-ethereum-abigen 0.7.0",
  "syn",
 ]
 
@@ -794,6 +875,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "substreams-macro"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "380cdbe3502aaa8d8bbb7e3f1d111236d68ca5b1c7837e324cbde8b84af3159e"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+ "thiserror",
+]
+
+[[package]]
 name = "substreams-template"
 version = "0.1.0"
 dependencies = [
@@ -802,8 +895,9 @@ dependencies = [
  "getrandom",
  "hex-literal",
  "prost",
- "substreams",
- "substreams-ethereum",
+ "substreams 0.4.0",
+ "substreams-ethereum 0.6.2",
+ "substreams-ethereum 0.7.0",
 ]
 
 [[package]]
